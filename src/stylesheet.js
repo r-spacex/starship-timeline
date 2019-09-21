@@ -1,13 +1,33 @@
-export const colorUsages = {};
+import { css } from 'styled-components';
 
-export const thresholds = {
-  sm: '768px',
-  md: '992px',
-  lg: '1200px'
+export const colorPalette = {
+  background: '#eeeeee',
+  contentBackground: '#f5f5f5',
+  text: '#3a3a3a',
+  primary: '#3569a4',
+  primaryText: '#ffffff',
+  secondary: '#21272b',
+  secondaryText: '#ffffff'
 };
 
-export const fonts = {};
+export const thresholds = {
+  large: '1200px'
+};
+
+export const fonts = {
+  main: css`
+    font-family: Noto Sans, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  `,
+  h2: css`
+    font-family: Noto Sans, sans-serif;
+    font-size: 30px;
+  `
+};
 
 export const fontSizes = {
   base: '18px'
 };
+
+export const Grid = size => `${size * 5}px`;
