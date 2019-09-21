@@ -1,0 +1,57 @@
+{
+  "name": "starship-timeline",
+  "version": "1.0.0",
+  "description": "Keep up to date with SpaceX's Super Heavy Starship, the rocket that will revolutionize space exploration.",
+  "author": "Albéric Trancart",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "build": "gatsby build",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "test:lint": "eslint .",
+    "test": "yarn test:lint"
+  },
+  "dependencies": {
+    "date-fns": "^2.2.1",
+    "gatsby": "^2.15.20",
+    "gatsby-background-image": "^0.8.12",
+    "gatsby-image": "^2.2.20",
+    "gatsby-plugin-canonical-urls": "^2.1.8",
+    "gatsby-plugin-eslint": "^2.0.5",
+    "gatsby-plugin-google-analytics": "^2.1.17",
+    "gatsby-plugin-manifest": "^2.2.18",
+    "gatsby-plugin-netlify": "^2.1.15",
+    "gatsby-plugin-offline": "^3.0.8",
+    "gatsby-plugin-react-helmet": "^3.1.8",
+    "gatsby-plugin-resolve-src": "^2.0.0",
+    "gatsby-plugin-robots-txt": "^1.5.0",
+    "gatsby-plugin-sharp": "^2.2.25",
+    "gatsby-plugin-sitemap": "^2.2.14",
+    "gatsby-plugin-styled-components": "^3.1.6",
+    "gatsby-source-filesystem": "^2.1.26",
+    "gatsby-transformer-sharp": "^2.2.16",
+    "nprogress": "^0.2.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-ga": "^2.6.0",
+    "react-helmet": "^5.2.1",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-import-resolver-webpack": "^0.11.1",
+    "eslint-loader": "^2.2.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "prettier": "^1.18.2"
+  },
+  "keywords": [
+    "react",
+    "gatsby",
+    "spacex"
+  ]
+}
