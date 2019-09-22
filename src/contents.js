@@ -1,27 +1,13 @@
 import React from 'react';
 import format from 'date-fns/format';
-import SEO from 'components/SEO';
-import Button from 'components/Button';
-import Countdown from 'components/Countdown';
-import { Header, HeaderCountdown, HeaderCountdownText, HeaderTitle, HeaderActions } from 'components/Header';
 import Image from 'components/Image';
 import Link from 'components/Link';
-import { Timeline, Item, ItemDate, ItemTitle } from 'components/Timeline';
 import Video from 'components/Video';
 
-const scrollToTimeline = () => {
-  const timeline = document.querySelector('#timeline');
-  timeline.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
-  });
-};
-
-const MARS_LANDING_GOAL = new Date('2024-12-31');
 const DATE_FORMAT = 'dd MMM yyyy';
 const formatDate = dateString => format(new Date(dateString), DATE_FORMAT);
 
-const contents = [
+export default [
   {
     title: `Humans on Mars`,
     date: `2024`,
@@ -58,7 +44,7 @@ const contents = [
     title: `First orbital launch`,
     date: `2020`,
     content: `SpaceX will test Starship in Earth's upper atmosphere, to validate a heat shielding technology and to prove that second stages
-    can also be safely landed and reused.`,
+      can also be safely landed and reused.`,
     future: true
   },
   {
@@ -76,7 +62,7 @@ const contents = [
     title: `Starhsip orbital prototypes construction starts`,
     date: formatDate('2019-05-14'),
     content: `SpaceX is currently building two high fidelity Starship prototypes: one in Florida, one in Texas. The first team
-    to reach orbit and come back on land is the winner.`
+      to reach orbit and come back on land is the winner.`
   },
   {
     title: `Starhopper construction starts`,
@@ -95,41 +81,3 @@ const contents = [
     content: `Fill with more content :)`
   }
 ];
-
-const IndexPage = () => (
-  <>
-    <SEO />
-    <Header background Tag="header" filename="starship-bfr-separation-orbit">
-      <HeaderTitle>SpaceX Starship Timeline</HeaderTitle>
-      <HeaderCountdown>
-        <HeaderCountdownText>Countdown to Mars landing goal</HeaderCountdownText>
-        <Countdown value={MARS_LANDING_GOAL} />
-      </HeaderCountdown>
-      <HeaderActions>
-        <Button
-          as="a"
-          href="https://alberic.trancart.net/2019/08/spacex-starship-the-rocket-that-will-make-history-explained-in-5-minutes"
-          title="Starship / BFR, the SpaceX rocket that will make history"
-          target="_blank"
-          rel="noopener noreferer"
-        >
-          What is Starship?
-        </Button>
-        <Button onClick={scrollToTimeline}>Show me the path to the future!</Button>
-      </HeaderActions>
-    </Header>
-    <Timeline id="timeline">
-      {contents.map(({ content, date, future, title }) => (
-        <Item key={date} future={future}>
-          <header>
-            <ItemTitle>{title}</ItemTitle>
-            <ItemDate>{date}</ItemDate>
-          </header>
-          {content}
-        </Item>
-      ))}
-    </Timeline>
-  </>
-);
-
-export default IndexPage;

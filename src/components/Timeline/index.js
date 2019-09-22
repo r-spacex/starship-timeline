@@ -29,7 +29,7 @@ export const ItemTitle = styled.h2`
   margin-bottom: ${Grid(2)};
 `;
 
-export const ItemDate = styled.time`
+export const ItemDate = styled.span`
   position: absolute;
   top: 0;
   display: inline-block;
