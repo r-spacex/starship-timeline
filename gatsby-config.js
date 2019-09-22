@@ -1,4 +1,4 @@
-const siteUrl = `https://www.starshiptimeline.space`;
+const siteUrl = `https://starshiptimeline.space`;
 
 module.exports = {
   siteMetadata: {
