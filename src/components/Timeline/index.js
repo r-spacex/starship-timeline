@@ -14,13 +14,13 @@ const OFFSET_CIRCLE_FROM_ITEM = DATE_ITEM_PADDING;
 export const Timeline = styled.main`
   display: flex;
   flex-direction: column;
-  padding: ${Grid(10)} ${Grid(2)} ${Grid(OFFSET_CIRCLE_FROM_ITEM)};
+  padding: ${Grid(8)} ${Grid(2)} ${Grid(OFFSET_CIRCLE_FROM_ITEM)};
   background-color: ${colorPalette.background};
   min-height: 100vh;
 
   @media screen and (min-width: ${thresholds.large}) {
     align-items: center;
-    padding-top: ${Grid(20)};
+    padding-top: ${Grid(16)};
   }
 `;
 
@@ -28,7 +28,6 @@ export const ItemContent = styled.article`
   position: relative;
   width: ${Grid(ITEM_WIDTH)};
   padding: ${Grid(10)} ${Grid(4)} ${Grid(4)};
-  margin-bottom: ${Grid(MARGIN_BETWEEN_ITEMS)};
   background-color: ${colorPalette.contentBackground};
   color: ${colorPalette.text};
   border-radius: ${radius};
