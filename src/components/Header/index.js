@@ -9,7 +9,7 @@ export const Header = styled(BackgroundImage)`
   justify-content: center;
   align-items: center;
   min-height: 80vh;
-  padding: ${Grid(2)};
+  padding: ${Grid(4)} ${Grid(2)};
   background-color: ${colorPalette.secondary};
   color: ${colorPalette.secondaryText};
   text-align: center;
@@ -21,7 +21,15 @@ export const Header = styled(BackgroundImage)`
 
 export const HeaderTitle = styled.h1`
   ${fonts.h1};
-  margin-bottom: ${Grid(10)};
+  margin-bottom: ${Grid(8)};
+`;
+
+export const HeaderCountdown = styled.div`
+  margin-bottom: ${Grid(8)};
+`;
+
+export const HeaderCountdownText = styled.div`
+  margin-bottom: ${Grid(2)};
 `;
 
 export const HeaderActions = styled.nav`

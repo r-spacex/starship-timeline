@@ -25,6 +25,9 @@ export const fonts = {
   `,
   h1: css`
     font-size: 40px;
+    @media screen and (min-width: ${thresholds.large}) {
+      font-size: 48px;
+    }
   `
 };
 

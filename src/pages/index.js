@@ -1,7 +1,8 @@
 import React from 'react';
 import SEO from 'components/SEO';
 import Button from 'components/Button';
-import { Header, HeaderTitle, HeaderActions } from 'components/Header';
+import Countdown from 'components/Countdown';
+import { Header, HeaderCountdown, HeaderCountdownText, HeaderTitle, HeaderActions } from 'components/Header';
 import { Timeline, Item, ItemDate, ItemTitle } from 'components/Timeline';
 
 const scrollToTimeline = () => {
@@ -12,11 +13,17 @@ const scrollToTimeline = () => {
   });
 };
 
+const MARS_LANDING_GOAL = new Date('2026-01-01');
+
 const IndexPage = () => (
   <>
     <SEO />
     <Header Tag="header" filename="starship-bfr-separation-orbit">
       <HeaderTitle>SpaceX Starship Timeline</HeaderTitle>
+      <HeaderCountdown>
+        <HeaderCountdownText>Countdown to Mars landing goal</HeaderCountdownText>
+        <Countdown value={MARS_LANDING_GOAL} />
+      </HeaderCountdown>
       <HeaderActions>
         <Button
           as="a"
