@@ -17,6 +17,7 @@ export const Timeline = styled.main`
   padding: ${Grid(8)} ${Grid(2)} ${Grid(OFFSET_CIRCLE_FROM_ITEM)};
   background-color: ${colorPalette.background};
   min-height: 100vh;
+  overflow-x: hidden;
 
   @media screen and (min-width: ${thresholds.large}) {
     align-items: center;
