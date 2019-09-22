@@ -21,8 +21,10 @@ export const fonts = {
     line-height: 1.5;
   `,
   h2: css`
-    font-family: Noto Sans, sans-serif;
     font-size: 30px;
+  `,
+  h1: css`
+    font-size: 40px;
   `
 };
 

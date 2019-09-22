@@ -16,7 +16,7 @@ const IndexPage = () => (
   <>
     <SEO />
     <Header Tag="header" filename="starship-bfr-separation-orbit">
-      <HeaderTitle>This is SpaceX Starship</HeaderTitle>
+      <HeaderTitle>SpaceX Starship Timeline</HeaderTitle>
       <HeaderActions>
         <Button
           as="a"
@@ -27,7 +27,7 @@ const IndexPage = () => (
         >
           What is Starship?
         </Button>
-        <Button onClick={scrollToTimeline}>OK, show me the path to the future!</Button>
+        <Button onClick={scrollToTimeline}>Show me the path to the future!</Button>
       </HeaderActions>
     </Header>
     <Timeline id="timeline">

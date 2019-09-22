@@ -14,10 +14,14 @@ const OFFSET_CIRCLE_FROM_ITEM = DATE_ITEM_PADDING;
 export const Timeline = styled.main`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: ${Grid(20)} ${Grid(2)} ${Grid(OFFSET_CIRCLE_FROM_ITEM)};
+  padding: ${Grid(10)} ${Grid(2)} ${Grid(OFFSET_CIRCLE_FROM_ITEM)};
   background-color: ${colorPalette.background};
   min-height: 100vh;
+
+  @media screen and (min-width: ${thresholds.large}) {
+    align-items: center;
+    padding-top: ${Grid(20)};
+  }
 `;
 
 export const ItemTitle = styled.h2`
@@ -117,7 +121,7 @@ const rightStyle = css`
 export const Item = styled.article`
   position: relative;
   width: ${Grid(ITEM_WIDTH)};
-  padding: ${Grid(10)} ${Grid(6)} ${Grid(4)};
+  padding: ${Grid(10)} ${Grid(4)} ${Grid(4)};
   margin-bottom: ${Grid(MARGIN_BETWEEN_ITEMS)};
   background-color: ${colorPalette.contentBackground};
   color: ${colorPalette.text};
@@ -135,8 +139,9 @@ export const Item = styled.article`
     }
   }
 
+  max-width: calc(100% - ${Grid(CIRCLE_SIZE / 2 + MARGIN_BETWEEN_ITEMS)});
   @media screen and (max-width: calc(${thresholds.large} - 1px)) {
     ${rightStyle};
-    margin-right: ${Grid(MARGIN_BETWEEN_ITEMS + ITEM_WIDTH)}
+    transform: translateX(${Grid(CIRCLE_SIZE / 2 + MARGIN_BETWEEN_ITEMS_AND_TIMELINE)});
   }
 `;
