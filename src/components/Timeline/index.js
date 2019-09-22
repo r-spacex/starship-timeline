@@ -168,11 +168,11 @@ export const Item = styled.article`
     }
   }
 
-  ${ItemContent} {
-    max-width: calc(100% - ${Grid(CIRCLE_SIZE / 2 + MARGIN_BETWEEN_ITEMS)});
-  }
   @media screen and (max-width: calc(${thresholds.large} - 1px)) {
     ${rightStyle};
     transform: translateX(${Grid(CIRCLE_SIZE / 2 + MARGIN_BETWEEN_ITEMS_AND_TIMELINE)});
+    ${ItemContent} {
+      max-width: calc(100% - ${Grid(CIRCLE_SIZE / 2 + MARGIN_BETWEEN_ITEMS)});
+    }
   }
 `;

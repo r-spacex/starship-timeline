@@ -37,14 +37,18 @@ export const HeaderActions = styled.nav`
   align-items: center;
   flex-wrap: wrap;
 
-  ${Button}:not(:last-child) {
-    @media screen and (min-width: ${thresholds.large}) {
-      margin-right: ${Grid(4)};
+  ${Button} {
+    &:not(:last-child) {
+      @media screen and (min-width: ${thresholds.large}) {
+        margin-right: ${Grid(4)};
+      }
+      @media screen and (max-width: calc(${thresholds.large} - 1px)) {
+        margin-bottom: ${Grid(2)};
+      }
     }
 
     @media screen and (max-width: calc(${thresholds.large} - 1px)) {
       width: 100%;
-      margin-bottom: ${Grid(2)};
     }
   }
 `;
