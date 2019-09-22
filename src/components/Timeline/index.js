@@ -24,6 +24,18 @@ export const Timeline = styled.main`
   }
 `;
 
+export const ItemContent = styled.article`
+  position: relative;
+  width: ${Grid(ITEM_WIDTH)};
+  padding: ${Grid(10)} ${Grid(4)} ${Grid(4)};
+  margin-bottom: ${Grid(MARGIN_BETWEEN_ITEMS)};
+  background-color: ${colorPalette.contentBackground};
+  color: ${colorPalette.text};
+  border-radius: ${radius};
+  box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.8s ease-in-out 0s, opacity 0.8s ease-in-out 0s;
+`;
+
 export const ItemTitle = styled.h2`
   ${fonts.h2}
   margin-bottom: ${Grid(2)};
@@ -70,7 +82,6 @@ const timeline = css`
 
 const leftStyle = css`
   transform: translateX(calc(-50% - ${Grid(MARGIN_BETWEEN_ITEMS_AND_TIMELINE)}));
-
   &::before {
     ${circle};
     right: -${Grid(MARGIN_BETWEEN_ITEMS_AND_TIMELINE + CIRCLE_SIZE / 2)};
@@ -79,6 +90,19 @@ const leftStyle = css`
   &::after {
     ${timeline};
     right: -${Grid(MARGIN_BETWEEN_ITEMS_AND_TIMELINE + TIMELINE_WIDTH / 2)};
+  }
+
+  ${ItemContent} {
+    ${props =>
+      props.visible
+        ? css`
+            opacity: 1;
+            transform: translateX(0);
+          `
+        : css`
+            opacity: 0;
+            transform: translateX(-50%);
+          `}
   }
 
   ${ItemDate} {
@@ -106,6 +130,19 @@ const rightStyle = css`
     left: -${Grid(MARGIN_BETWEEN_ITEMS_AND_TIMELINE + TIMELINE_WIDTH / 2)};
   }
 
+  ${ItemContent} {
+    ${props =>
+      props.visible
+        ? css`
+            opacity: 1;
+            transform: translateX(0);
+          `
+        : css`
+            opacity: 0;
+            transform: translateX(50%);
+          `}
+  }
+
   ${ItemDate} {
     left: 0;
 
@@ -120,14 +157,7 @@ const rightStyle = css`
 
 export const Item = styled.article`
   position: relative;
-  width: ${Grid(ITEM_WIDTH)};
-  padding: ${Grid(10)} ${Grid(4)} ${Grid(4)};
   margin-bottom: ${Grid(MARGIN_BETWEEN_ITEMS)};
-  background-color: ${colorPalette.contentBackground};
-  color: ${colorPalette.text};
-  border-radius: ${radius};
-  box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.8s ease-in-out 0s, opacity 0.8s ease-in-out 0s;
 
   @media screen and (min-width: ${thresholds.large}) {
     &:nth-child(odd) {
@@ -139,7 +169,9 @@ export const Item = styled.article`
     }
   }
 
-  max-width: calc(100% - ${Grid(CIRCLE_SIZE / 2 + MARGIN_BETWEEN_ITEMS)});
+  ${ItemContent} {
+    max-width: calc(100% - ${Grid(CIRCLE_SIZE / 2 + MARGIN_BETWEEN_ITEMS)});
+  }
   @media screen and (max-width: calc(${thresholds.large} - 1px)) {
     ${rightStyle};
     transform: translateX(${Grid(CIRCLE_SIZE / 2 + MARGIN_BETWEEN_ITEMS_AND_TIMELINE)});
