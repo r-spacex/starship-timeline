@@ -10,6 +10,7 @@ const Button = styled.button`
   cursor: pointer;
   border-radius: ${radius};
   text-align: center;
+  transition: background-color ease-in-out 0.3s 0s;
 
   &:hover {
     background-color: ${darken(0.1, colorPalette.primary)};

@@ -1,8 +1,15 @@
 import React from 'react';
+import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
+import Image from 'gatsby-image';
+import { Grid } from 'stylesheet';
 
-const BackgroundImg = ({ filename, children, tag, ...rest }) => (
+const StyledImage = styled(Image)`
+  margin: ${Grid(2)} 0;
+`;
+
+const Img = ({ background, filename, children, tag, ...rest }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -29,13 +36,17 @@ const BackgroundImg = ({ filename, children, tag, ...rest }) => (
         return null;
       }
 
-      return (
-        <BackgroundImage Tag={tag} fluid={image.node.childImageSharp.fluid} {...rest}>
-          {children}
-        </BackgroundImage>
-      );
+      if (background) {
+        return (
+          <BackgroundImage Tag={tag} fluid={image.node.childImageSharp.fluid} {...rest}>
+            {children}
+          </BackgroundImage>
+        );
+      }
+
+      return <StyledImage fluid={image.node.childImageSharp.fluid} {...rest} />;
     }}
   />
 );
 
-export default BackgroundImg;
+export default Img;

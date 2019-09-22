@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import { colorPalette, fonts, Grid, thresholds } from 'stylesheet';
 import Button from 'components/Button';
-import BackgroundImage from 'components/BackgroundImage';
+import Image from 'components/Image';
 
-export const Header = styled(BackgroundImage)`
+export const Header = styled(Image)`
   display: flex;
   flex-direction: column;
   justify-content: center;
