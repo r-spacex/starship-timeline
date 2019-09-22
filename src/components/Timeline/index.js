@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { colorPalette, fonts, Grid, thresholds } from 'stylesheet';
+import { colorPalette, fonts, Grid, radius, thresholds } from 'stylesheet';
 
 const DATE_ITEM_PADDING = 2;
 const TRIANGLE_WIDTH = 3;
@@ -121,7 +121,7 @@ export const Item = styled.article`
   margin-bottom: ${Grid(MARGIN_BETWEEN_ITEMS)};
   background-color: ${colorPalette.contentBackground};
   color: ${colorPalette.text};
-  border-radius: ${Grid(1)};
+  border-radius: ${radius};
   box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3);
   transition: transform 0.8s ease-in-out 0s, opacity 0.8s ease-in-out 0s;
 

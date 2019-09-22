@@ -15,7 +15,7 @@ const scrollToTimeline = () => {
 const IndexPage = () => (
   <>
     <SEO />
-    <Header>
+    <Header Tag="header" filename="starship-bfr-separation-orbit">
       <HeaderTitle>This is SpaceX Starship</HeaderTitle>
       <HeaderActions>
         <Button

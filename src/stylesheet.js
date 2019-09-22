@@ -30,4 +30,6 @@ export const fontSizes = {
   base: '18px'
 };
 
+export const radius = '3px';
+
 export const Grid = size => `${size * 5}px`;
