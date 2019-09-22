@@ -61,8 +61,13 @@ export default [
   {
     title: `Starhsip orbital prototypes construction starts`,
     date: formatDate('2019-05-14'),
-    content: `SpaceX is currently building two high fidelity Starship prototypes: one in Florida, one in Texas. The first team
-      to reach orbit and come back on land is the winner.`
+    content: (
+      <>
+        SpaceX is currently building two high fidelity Starship prototypes: one in Florida, one in Texas. The first team
+        to reach orbit and come back on land is the winner.
+        <Image filename="florby.jpg" />
+      </>
+    )
   },
   {
     title: `Starhopper construction starts`,
