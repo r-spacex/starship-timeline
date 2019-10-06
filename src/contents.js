@@ -35,7 +35,7 @@ export default [
     future: true
   },
   {
-    title: `First customer launch`,
+    title: `First satellite launch`,
     date: `2021`,
     content: `SpaceX is already in talks with three potential customers for a commercial satellite launch in 2021.`,
     future: true
@@ -46,6 +46,16 @@ export default [
     content: `SpaceX will test Starship in Earth's upper atmosphere, to validate a heat shielding technology and to prove that second stages
       can also be safely landed and reused.`,
     future: true
+  },
+  {
+    title: `Starship Mk1 presentation`,
+    date: formatDate('2019-09-28'),
+    content: (
+      <>
+        SpaceX unveiled its first prototype of the Starship, with the goal of doing a 20km-high flight with it.
+        <Image filename="starhopper-mk1-complete.jpg" />
+      </>
+    )
   },
   {
     title: `Starhopper 150m hop`,
@@ -63,9 +73,19 @@ export default [
     date: formatDate('2019-05-14'),
     content: (
       <>
-        SpaceX is currently building two high fidelity Starship prototypes: one in Florida, one in Texas. The first team
+        SpaceX has started building two high fidelity Starship prototypes: one in Florida, one in Texas. The first team
         to reach orbit and come back on land is the winner.
         <Image filename="florby.jpg" />
+      </>
+    )
+  },
+  {
+    title: `First full-scale Raptor engine test`,
+    date: formatDate('2019-02-04'),
+    content: (
+      <>
+        The Raptor engine was tested at full power for the first time.
+        <Video youtubeId="X2dEpe8WS1A" />
       </>
     )
   },
@@ -81,8 +101,60 @@ export default [
     )
   },
   {
-    title: `TODO`,
+    title: `First Starship customer`,
+    date: formatDate('2018-09-17'),
+    content: (
+      <>
+        SpaceX announced its first crewed flight, targeting 2023 for a flight around the Moon. The crew will be composed
+        of several artists lead by Yusaku Maezawa, a Japanese billionaire.
+        <Image filename="dearmoon.jpg" />
+      </>
+    )
+  },
+  {
+    title: `Tooling for the rocket body delivered`,
+    date: formatDate('2018-04-09'),
+    content: (
+      <>
+        SpaceX received its first tool and started to manufacture carbon fiber tanks under a tent in Los Angeles. This
+        tool was later scrapped because SpaceX chose to replace carbon fiber with stainless steel, a cheaper and more
+        adapted material.
+        <Image filename="bfrtool.jpg" />
+      </>
+    )
+  },
+  {
+    title: `Project downscaled`,
+    date: formatDate('2017-09-29'),
+    content: (
+      <>
+        To make the project more sustainable by making the rocket pay for itself, SpaceX downscaled the size of the
+        rocket from a 12 meters diameter to a 9 meters one.
+        <Image filename="bfr.jpg" />
+      </>
+    )
+  },
+  {
+    title: `Elon Musks reveals SpaceX's plan for Mars`,
+    date: formatDate('2016-09-28'),
+    content: (
+      <>
+        The Starship (known at the time as the &quot;Interplanetary Transport System&quot;) was unveiled for the first
+        time while setting the aspirational goal of launching human crew to Mars by 2024.
+        <Image filename="its.jpg" />
+      </>
+    )
+  },
+  {
+    title: `Raptor engine development starts`,
     date: `2012`,
-    content: `Fill with more content :)`
+    content: `SpaceX begins to design a methalox engine more powerful and capable than the Merlin-1D engine of the Falcon 9.`
+  },
+  {
+    title: `Elon Musk's bet`,
+    date: `April 2009`,
+    content: `During an interview, Elon Musk made a bet that SpaceX would put a man on Mars by "2020 or 2025".
+              Musk has continued to reiterate this rough timeframe since. At the time, SpaceX just made it
+              to orbit with its Falcon 1 rocket.`
   }
 ];
