@@ -35,7 +35,7 @@ export default [
     future: true
   },
   {
-    title: `First satellite launch`,
+    title: `First Starship satellite launch`,
     date: `2021`,
     content: `SpaceX is already in talks with three potential customers for a commercial satellite launch in 2021.`,
     future: true
@@ -146,6 +146,11 @@ export default [
     )
   },
   {
+    title: `First rocket landing`,
+    date: formatDate('2015-12-22'),
+    content: `For the first time, SpaceX succeeds in landing the first stage of its Falcon 9 rocket.`
+  },
+  {
     title: `Raptor engine development starts`,
     date: `2012`,
     content: `SpaceX begins to design a methalox engine more powerful and capable than the Merlin-1D engine of the Falcon 9.`
@@ -154,7 +159,21 @@ export default [
     title: `Elon Musk's bet`,
     date: `April 2009`,
     content: `During an interview, Elon Musk made a bet that SpaceX would put a man on Mars by "2020 or 2025".
-              Musk has continued to reiterate this rough timeframe since. At the time, SpaceX just made it
-              to orbit with its Falcon 1 rocket.`
+              Musk has continued to reiterate this rough timeframe since.`
+  },
+  {
+    title: `Falcon 1 achieves orbit`,
+    date: `September 2008`,
+    content: `On the fourth try, SpaceX finally succeeds in delivering a payload into Earth orbit.`
+  },
+  {
+    title: `SpaceX is founded`,
+    date: `2002`,
+    content: (
+      <>
+        SpaceX is founded by tech entrepreneurs with the goal of providing cheaper access to space.
+        <Image filename="spacex2002.jpg" />
+      </>
+    )
   }
 ];
