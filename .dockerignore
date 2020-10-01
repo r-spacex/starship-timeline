@@ -1,0 +1,8 @@
+.cache/
+.eslintignore
+.eslintrc.js
+.gitignore
+Dockerfile
+node_modules/
+public/
+README.md
