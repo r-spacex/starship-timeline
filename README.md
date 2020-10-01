@@ -16,6 +16,14 @@
 4. ...
 5. Profit!
 
+### Docker instructions
+
+1. In the project directory, run `docker image build -t starship .` command.
+2. Run `docker container run --name starship -d -p 8000:9000 starship`
+3. Open `http://localhost:8000/`.
+4. ...
+5. Profit!
+
 ## Deployment
 
 Push on the `master` branch.
